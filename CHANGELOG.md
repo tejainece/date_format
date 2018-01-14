@@ -1,5 +1,14 @@
 # Changelog
 
-## 0.0.1
+## 1.0.2
 
-- Initial version, created by Stagehand
++ Fixed negative timezone bug
+
+## 1.0.1
+
++ Docs
++ Added microsecond
+
+## 1.0.0
+
++ `formatDate`

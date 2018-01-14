@@ -1,22 +1,47 @@
 # date_format
 
-A library for Dart developers.
+A simple API to format dates.
 
-Created from templates made available by Stagehand under a BSD-style
-[license](https://github.com/dart-lang/stagehand/blob/master/LICENSE).
+# Usage
 
-## Usage
+Use `formatDate` function to format a `DateTime`
 
-A simple usage example:
+```dart
+print(formatDate(new DateTime(1989, 02, 21), [yyyy, '-', mm, '-', dd]));
+```
 
-    import 'package:date_format/date_format.dart';
+Output:
 
-    main() {
-      var awesome = new Awesome();
-    }
+> 1989-02-21
 
-## Features and bugs
+### Long month names
 
-Please file feature requests and bugs at the [issue tracker][tracker].
+```dart
+print(formatDate(new DateTime(1989, 2, 21), [yy, '-', M, '-', d]));
+```
 
-[tracker]: http://example.com/issues/replaceme
+Output:
+
+> 89-feb-21
+
+### Time parts
+
+```dart
+print(formatDate(
+      new DateTime(1989, 02, 1, 15, 40, 10), [HH, ':', nn, ':', ss]));
+```
+
+Output:
+
+> 15:40:10
+
+### Timezone
+
+```dart
+print(formatDate(
+      new DateTime(1989, 02, 1, 15, 40, 10), [HH, ':', nn, ':', ss, z]));
+```
+
+Output:
+
+> 15:40:10+0100
