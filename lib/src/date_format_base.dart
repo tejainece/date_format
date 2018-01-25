@@ -308,54 +308,53 @@ String _digits(int value, int length) {
 }
 
 const List<String> monthShort = const <String>[
-  'jan',
-  'feb',
-  'mar',
-  'apr',
-  'may',
-  'jun',
-  'jul',
-  'aug',
-  'sep',
-  'sept',
-  'oct',
-  'nov',
-  'dec'
+  'Jan',
+  'Feb',
+  'Mar',
+  'Apr',
+  'May',
+  'Jun',
+  'Jul',
+  'Aug',
+  'Sep',
+  'Oct',
+  'Nov',
+  'Dec'
 ];
 
 const List<String> monthLong = const <String>[
-  'january',
-  'february',
-  'march',
-  'april',
-  'may',
-  'june',
-  'july',
-  'august',
-  'september',
-  'october',
-  'november',
-  'december'
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December'
 ];
 
 const List<String> dayShort = const [
-  'mon',
-  'tue',
-  'wed',
-  'thur',
-  'fri',
-  'sat',
-  'sun'
+  'Mon',
+  'Tue',
+  'Wed',
+  'Thur',
+  'Fri',
+  'Sat',
+  'Sun'
 ];
 
 const List<String> dayLong = const [
-  'monday',
-  'tuesday',
-  'wednesday',
-  'thursday',
-  'friday',
-  'saturday',
-  'sunday'
+  'Monday',
+  'Tuesday',
+  'Wednesday',
+  'Thursday',
+  'Friday',
+  'Saturday',
+  'Sunday'
 ];
 
 int dayInYear(DateTime date) =>

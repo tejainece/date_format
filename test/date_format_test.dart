@@ -12,17 +12,20 @@ void main() {
           '89-2-1');
 
       expect(formatDate(new DateTime(1989, 02, 1), [yy, '-', MM, '-', d]),
-          '89-march-1');
+          '89-February-1');
       expect(formatDate(new DateTime(1989, 02, 1), [yy, '-', M, '-', d]),
-          '89-mar-1');
+          '89-Feb-1');
 
       expect(formatDate(new DateTime(1989, 02, 1), [yy, '-', M, '-', d]),
-          '89-mar-1');
+          '89-Feb-1');
 
       expect(formatDate(new DateTime(1989, 02, 1), [yy, '-', M, '-', DD]),
-          '89-mar-thursday');
+          '89-Feb-Wednesday');
       expect(formatDate(new DateTime(1989, 02, 1), [yy, '-', M, '-', D]),
-          '89-mar-thur');
+          '89-Feb-Wed');
+
+      expect(formatDate(new DateTime(2018, 1, 25), [yy, '-', M, '-', D]),
+          '18-Jan-Thur');
     });
   });
 }

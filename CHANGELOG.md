@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.4
+
++ Capital letters
+
 ## 1.0.2
 
 + Fixed negative timezone bug
