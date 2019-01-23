@@ -7,7 +7,7 @@ A simple API to format dates.
 Use `formatDate` function to format a `DateTime`
 
 ```dart
-print(formatDate(new DateTime(1989, 02, 21), [yyyy, '-', mm, '-', dd]));
+print(formatDate(DateTime(1989, 02, 21), [yyyy, '-', mm, '-', dd]));
 ```
 
 Output:
@@ -17,7 +17,7 @@ Output:
 ### Long month names
 
 ```dart
-print(formatDate(new DateTime(1989, 2, 21), [yy, '-', M, '-', d]));
+print(formatDate(DateTime(1989, 2, 21), [yy, '-', M, '-', d]));
 ```
 
 Output:
@@ -28,7 +28,7 @@ Output:
 
 ```dart
 print(formatDate(
-      new DateTime(1989, 02, 1, 15, 40, 10), [HH, ':', nn, ':', ss]));
+      DateTime(1989, 02, 1, 15, 40, 10), [HH, ':', nn, ':', ss]));
 ```
 
 Output:
@@ -39,7 +39,7 @@ Output:
 
 ```dart
 print(formatDate(
-      new DateTime(1989, 02, 1, 15, 40, 10), [HH, ':', nn, ':', ss, z]));
+      DateTime(1989, 02, 1, 15, 40, 10), [HH, ':', nn, ':', ss, z]));
 ```
 
 Output:

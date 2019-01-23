@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.6
+
++ Fixed `AM`/`PM` conflict at midnight and noon
+
 ## 1.0.4
 
 + Capital letters
