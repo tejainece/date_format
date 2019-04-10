@@ -363,3 +363,167 @@ const List<String> dayLong = const [
 
 int dayInYear(DateTime date) =>
     date.difference(DateTime(date.year, 1, 1)).inDays;
+
+
+
+///
+/// timespan
+///
+/// Returns a span of seconds in this format (depending on [units]):
+/// ```
+/// '6 years, 7 months, 2 weeks, 8 days, 23 hours, 9 minutes, 2 seconds ago'
+/// ```
+///
+/// [datetime]	The datetime. The default is
+/// 
+/// [otherDateTime]	The datetime to compare with is:
+/// ```
+/// DateTime.now()
+/// ```
+/// 
+/// [languages] The map of lanugage strings. The default are in English.
+/// The supported strings are:
+/// ```
+/// 'prefix'    (default = 'prefix')
+/// 'suffix'    (default = 'suffix')
+/// 'seperator' (default = ', ')
+/// 'years'     (default = 'years')
+/// 'year'      (default = 'year')
+/// 'months'    (default = 'months')
+/// 'month'    (default = 'month')
+/// 'weeks'    (default = 'weeks')
+/// 'week'    (default = 'week')
+/// 'days'      (default = 'days')
+/// 'hours'     (default = 'hours')
+/// 'hour'      (default = 'hour')
+/// 'minutes'   (default = 'minutes')
+/// 'minute'   (default = 'minute')
+/// 'seconds'   (default = 'seconds')
+/// 'second'   (default = 'second')
+/// ```
+///
+/// [units] The number of display units. The default number of units are:
+/// ```
+/// 7
+/// ```
+///
+String timespan(DateTime datetime, {DateTime otherDateTime, int units: 1, Map<String, String> languages})
+{
+  // default languages are in English.
+  const defaultLanguages = const {
+    'prefix': 'in',
+    'suffix': 'ago',
+    'seperator': ', ',
+    'years': 'years',
+    'year': 'year',
+    'months': 'months',
+    'month': 'month',
+    'weeks': 'weeks',
+    'week': 'week',
+    'days': 'days',
+    'day': 'day',
+    'hours': 'hours',
+    'hour': 'hour',
+    'minutes': 'minutes',
+    'minute': 'minute',
+    'seconds': 'seconds',
+    'second': 'second',
+  };
+  bool isAgo = true;
+  int years, months, weeks, days, hours, minutes;
+  int time = datetime.millisecondsSinceEpoch ~/ 1000;
+  final int otherTime = otherDateTime != null ?
+    otherDateTime.millisecondsSinceEpoch ~/ 1000 :
+    DateTime.now().millisecondsSinceEpoch ~/ 1000 ;
+  final List<String> str = [];
+
+
+  // assign default language if user hasn't specified it.
+  if (languages != null)
+    defaultLanguages.forEach((String key, String value) => languages[key] ??= defaultLanguages[key]);
+  else
+    languages = defaultLanguages;
+
+  if (otherTime <= time){
+    time =  time - otherTime;
+    isAgo = false;
+  }
+  else if(otherTime > time){
+    time = otherTime - time;
+  }
+
+  years = (time / 31557600).floor();
+
+  if (years > 0)
+  {
+    str.add( years.toString() + ' ' + (years > 1 ? languages['years'] : languages['year']) );
+  }
+
+  time -= years * 31557600;
+  months = (time / 2629743).floor();
+
+  if (str.length < units && (years > 0 || months > 0))
+  {
+    if (months > 0)
+    {
+      str.add( months.toString() + ' ' + (months > 1 ? languages['months'] : languages['month']) );
+    }
+
+    time -= months * 2629743;
+  }
+
+  weeks = (time / 604800).floor();
+
+  if (str.length < units && (years > 0 || months > 0 || weeks > 0))
+  {
+    if (weeks > 0)
+    {
+      str.add( weeks.toString() + ' ' + (weeks > 1 ? languages['weeks'] : languages['week']) );
+    }
+
+    time -= weeks * 604800;
+  }
+
+  days = (time / 86400).floor();
+
+  if (str.length < units && (months > 0 || weeks > 0 || days > 0))
+  {
+    if (days > 0)
+    {
+      str.add( days.toString() + ' ' + (days > 1 ? languages['days'] : languages['day']) );
+    }
+
+    time -= days * 86400;
+  }
+
+  hours = (time / 3600).floor();
+
+  if (str.length < units && (days > 0 || hours > 0))
+  {
+    if (hours > 0)
+    {
+      str.add( hours.toString() + ' ' + (hours > 1 ? languages['hours'] : languages['hour']) );
+    }
+
+    time -= hours * 3600;
+  }
+
+  minutes = (time / 60).floor();
+
+  if (str.length < units && (days > 0 || hours > 0 || minutes > 0))
+  {
+    if (minutes > 0)
+    {
+      str.add( minutes.toString() + ' ' + (minutes > 1 ? languages['minutes'] : languages['minute']) );
+    }
+
+    time -= minutes * 60;
+  }
+
+  if (str.length == 0)
+  {
+    str.add( time.toString() + ' ' + (time > 1 ? languages['seconds'] : languages['second']) );
+  }
+
+  return (!isAgo ? (languages['prefix'] + ' ') : '') + str.join(languages['seperator']) + (isAgo ? (' ' + languages['suffix']) : '');
+}

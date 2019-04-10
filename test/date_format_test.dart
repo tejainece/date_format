@@ -62,5 +62,16 @@ void main() {
       expect(formatDate(DateTime(1989, 02, 21, 23, 59), [h, ':', n, am]),
           '11:59PM');
     });
+
+    test('Time format', () {
+      expect(timespan(DateTime(1997, 6, 6), otherDateTime: DateTime(1997, 6, 7), units: 1),
+          '1 day ago');
+
+      expect(timespan(DateTime(1997, 6, 7), otherDateTime: DateTime(1997, 6, 6), units: 1),
+          'in 1 day');
+
+      expect(timespan(DateTime(1997, 6, 6, 6), otherDateTime: DateTime(1997, 6, 6, 14), units: 1, languages: {'hours': 'hrs', 'suffix': ''}),
+          '8 hrs ');
+    });
   });
 }

@@ -41,4 +41,24 @@ main() {
 
   print(formatDate(
       DateTime(1989, 02, 1, 15, 40, 10), [HH, ':', nn, ':', ss, ' ', Z]));
+
+  // The comments may be removed. They are just for clarity.cls
+
+  /// example:
+  /// ```
+  /// '1 day ago'
+  /// ```
+  print(timespan(DateTime(1997, 6, 6), otherDateTime: DateTime(1997, 6, 7), units: 1));
+
+  /// example:
+  /// ```
+  /// 'in 1 day'
+  /// ```
+  print(timespan(DateTime(1997, 6, 7), otherDateTime: DateTime(1997, 6, 6), units: 1));
+
+  /// example:
+  /// ```
+  /// '8 hrs '
+  /// ```
+  print(timespan(DateTime(1997, 6, 6, 6), otherDateTime: DateTime(1997, 6, 6, 14), units: 1, languages: {'hours': 'hrs', 'suffix': ''}));
 }
