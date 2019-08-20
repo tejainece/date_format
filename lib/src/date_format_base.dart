@@ -311,6 +311,65 @@ String _digits(int value, int length) {
   return ret;
 }
 
+String ago(DateTime date) {
+  var now = DateTime.now();
+  final sb = StringBuffer();
+
+  if (now.isAfter(date)) {
+    var diff = now.difference(date);
+
+    if (diff.inDays > 30) {
+      var months = diff.inDays ~/ 30;
+      if (months > 11) {
+        var years = months ~/ 12;
+        if (years == 1) {
+          sb.write('$years year ago');
+        } else {
+          sb.write('$years years ago');
+        }
+      } else if (months == 1) {
+        sb.write('$months month ago');  
+      } else {
+        sb.write('$months months ago');
+      }
+    }
+    else if (diff.inDays > 0) {
+      var days = diff.inDays;
+      if (days == 1) {
+        sb.write('$days day ago');  
+      } else {
+        sb.write('$days days ago');
+      }
+    }
+    else if (diff.inHours > 0) {
+      var hours = diff.inHours;
+      if (hours == 1) {
+        sb.write('$hours hour ago');  
+      } else {
+        sb.write('$hours hours ago');
+      }
+    }
+    else if (diff.inMinutes > 0) {
+      var minutes = diff.inMinutes;
+      if (minutes == 1) {
+        sb.write('$minutes minute ago');
+      } else {
+        sb.write('$minutes minutes ago');
+      }
+    }
+    else if (diff.inSeconds > 0) {
+      var seconds = diff.inSeconds;
+      if (seconds == 1) {
+        sb.write('$seconds second ago');
+      } else {
+        sb.write('$seconds seconds ago');
+      }
+    }
+  }
+
+  return sb.toString();
+}
+
 const List<String> monthShort = const <String>[
   'Jan',
   'Feb',

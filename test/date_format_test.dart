@@ -62,5 +62,17 @@ void main() {
       expect(formatDate(DateTime(1989, 02, 21, 23, 59), [h, ':', n, am]),
           '11:59PM');
     });
+  
+    test('Relative', () {
+      expect(ago(DateTime.now().subtract(Duration(days: 365))), '1 year ago');
+      expect(ago(DateTime.now().subtract(Duration(days: 780))), '2 years ago');
+      expect(ago(DateTime.now().subtract(Duration(days: 32))), '1 month ago');
+      expect(ago(DateTime.now().subtract(Duration(days: 93))), '3 months ago');
+      expect(ago(DateTime.now().subtract(Duration(hours: 30))), '1 day ago');
+      expect(ago(DateTime.now().subtract(Duration(hours: 16))), '16 hours ago');
+      expect(ago(DateTime.now().subtract(Duration(hours: 1))), '1 hour ago');
+      expect(ago(DateTime.now().subtract(Duration(minutes: 30))), '30 minutes ago');
+      expect(ago(DateTime.now().subtract(Duration(minutes: 1))), '1 minute ago');
+    });
   });
 }
