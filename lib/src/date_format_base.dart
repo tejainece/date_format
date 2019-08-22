@@ -311,6 +311,7 @@ String _digits(int value, int length) {
   return ret;
 }
 
+/// Outputs date/time in past relative terms
 String ago(DateTime date) {
   var now = DateTime.now();
   final sb = StringBuffer();
@@ -318,50 +319,68 @@ String ago(DateTime date) {
   if (now.isAfter(date)) {
     var diff = now.difference(date);
 
+	/// Diff is up to a month
     if (diff.inDays > 30) {
       var months = diff.inDays ~/ 30;
+	  /// Diff is up to a year
       if (months > 11) {
         var years = months ~/ 12;
         if (years == 1) {
+		  /// Exactly one year
           sb.write('$years year ago');
         } else {
+		  /// Multiple years
           sb.write('$years years ago');
         }
       } else if (months == 1) {
+		/// Exactly one month
         sb.write('$months month ago');  
       } else {
+		/// Multiple months
         sb.write('$months months ago');
       }
     }
+	/// Diff is up to a day
     else if (diff.inDays > 0) {
       var days = diff.inDays;
       if (days == 1) {
+		/// Exactly one day
         sb.write('$days day ago');  
       } else {
+		/// Multiple days
         sb.write('$days days ago');
       }
     }
+	/// Diff is up to an hour
     else if (diff.inHours > 0) {
       var hours = diff.inHours;
       if (hours == 1) {
+		/// Exactly one hour
         sb.write('$hours hour ago');  
       } else {
+		/// Multiple hours
         sb.write('$hours hours ago');
       }
     }
+	/// Diff is up to a minute
     else if (diff.inMinutes > 0) {
       var minutes = diff.inMinutes;
       if (minutes == 1) {
+		/// Exactly one minute
         sb.write('$minutes minute ago');
       } else {
+		/// Multiple minutes
         sb.write('$minutes minutes ago');
       }
     }
+	/// Diff is up to a second
     else if (diff.inSeconds > 0) {
       var seconds = diff.inSeconds;
       if (seconds == 1) {
+		/// Exactly one second
         sb.write('$seconds second ago');
       } else {
+		/// Multiple seconds
         sb.write('$seconds seconds ago');
       }
     }
