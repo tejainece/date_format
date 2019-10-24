@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.8
+
+- Added `Locale` support with `EnglishLocale` as default locale
+
 ## 1.0.6
 
 + Fixed `AM`/`PM` conflict at midnight and noon

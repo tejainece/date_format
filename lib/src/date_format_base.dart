@@ -1,3 +1,7 @@
+import 'locale/locale.dart';
+
+export 'locale/locale.dart';
+
 /// Outputs year as four digits
 ///
 /// Example:
@@ -219,7 +223,8 @@ const String am = 'am';
 const String z = 'z';
 const String Z = 'Z';
 
-String formatDate(DateTime date, List<String> formats) {
+String formatDate(DateTime date, List<String> formats,
+    {Locale locale = const EnglishLocale()}) {
   final sb = StringBuffer();
 
   for (String format in formats) {
@@ -232,9 +237,9 @@ String formatDate(DateTime date, List<String> formats) {
     } else if (format == m) {
       sb.write(date.month);
     } else if (format == MM) {
-      sb.write(monthLong[date.month - 1]);
+      sb.write(locale.monthsLong[date.month - 1]);
     } else if (format == M) {
-      sb.write(monthShort[date.month - 1]);
+      sb.write(locale.monthsShort[date.month - 1]);
     } else if (format == dd) {
       sb.write(_digits(date.day, 2));
     } else if (format == d) {
@@ -246,9 +251,9 @@ String formatDate(DateTime date, List<String> formats) {
     } else if (format == WW) {
       sb.write(_digits((dayInYear(date) + 7) ~/ 7, 2));
     } else if (format == DD) {
-      sb.write(dayLong[date.weekday - 1]);
+      sb.write(locale.daysLong[date.weekday - 1]);
     } else if (format == D) {
-      sb.write(dayShort[date.weekday - 1]);
+      sb.write(locale.daysShort[date.weekday - 1]);
     } else if (format == HH) {
       sb.write(_digits(date.hour, 2));
     } else if (format == H) {
@@ -310,56 +315,6 @@ String _digits(int value, int length) {
   }
   return ret;
 }
-
-const List<String> monthShort = const <String>[
-  'Jan',
-  'Feb',
-  'Mar',
-  'Apr',
-  'May',
-  'Jun',
-  'Jul',
-  'Aug',
-  'Sep',
-  'Oct',
-  'Nov',
-  'Dec'
-];
-
-const List<String> monthLong = const <String>[
-  'January',
-  'February',
-  'March',
-  'April',
-  'May',
-  'June',
-  'July',
-  'August',
-  'September',
-  'October',
-  'November',
-  'December'
-];
-
-const List<String> dayShort = const [
-  'Mon',
-  'Tue',
-  'Wed',
-  'Thur',
-  'Fri',
-  'Sat',
-  'Sun'
-];
-
-const List<String> dayLong = const [
-  'Monday',
-  'Tuesday',
-  'Wednesday',
-  'Thursday',
-  'Friday',
-  'Saturday',
-  'Sunday'
-];
 
 int dayInYear(DateTime date) =>
     date.difference(DateTime(date.year, 1, 1)).inDays;
