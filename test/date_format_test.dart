@@ -1,4 +1,5 @@
 import 'package:date_format/date_format.dart';
+import 'package:date_format/src/locale/spanish.dart';
 import 'package:test/test.dart';
 
 void main() {
@@ -61,6 +62,24 @@ void main() {
       expect(formatDate(DateTime(1989, 02, 21, 23), [h, am]), '11PM');
       expect(formatDate(DateTime(1989, 02, 21, 23, 59), [h, ':', n, am]),
           '11:59PM');
+    });
+
+    test('Spanish', () {
+      expect(formatDate(DateTime(1989, 02, 1), [yy, '-', MM, '-', d], locale: SpanishLocale()),
+          '89-Febrero-1');
+      expect(
+          formatDate(DateTime(1989, 03, 1), [yy, '-', M, '-', d], locale: SpanishLocale()), '89-Mar-1');
+
+      expect(
+          formatDate(DateTime(1989, 04, 1), [yy, '-', M, '-', d], locale: SpanishLocale()), '89-Abr-1');
+
+      expect(formatDate(DateTime(1989, 02, 1), [yy, '-', M, '-', DD], locale: SpanishLocale()),
+          '89-Feb-Miércoles');
+      expect(formatDate(DateTime(1989, 02, 1), [yy, '-', M, '-', D], locale: SpanishLocale()),
+          '89-Feb-Mié');
+
+      expect(formatDate(DateTime(2018, 1, 25), [yy, '-', M, '-', D], locale: SpanishLocale()),
+          '18-Ene-Jue');
     });
   });
 }
