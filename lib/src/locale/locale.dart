@@ -8,4 +8,8 @@ abstract class Locale {
   List<String> get daysShort;
 
   List<String> get daysLong;
+
+  String get am;
+
+  String get pm;
 }

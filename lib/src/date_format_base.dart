@@ -267,7 +267,7 @@ String formatDate(DateTime date, List<String> formats,
       if (hour == 0) hour = 12;
       sb.write(hour);
     } else if (format == am) {
-      sb.write(date.hour < 12 ? 'AM' : 'PM');
+      sb.write(date.hour < 12 ? locale.am : locale.pm);
     } else if (format == nn) {
       sb.write(_digits(date.minute, 2));
     } else if (format == n) {

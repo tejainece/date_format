@@ -52,4 +52,10 @@ class EnglishLocale implements Locale {
     'Saturday',
     'Sunday'
   ];
+
+  @override
+  String get am => "AM";
+
+  @override
+  String get pm => "PM";
 }
