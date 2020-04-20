@@ -223,10 +223,10 @@ const String am = 'am';
 const String z = 'z';
 const String Z = 'Z';
 
-/// Escape
+/// Escape delimiters to be used as normal string.
 ///
 /// Example:
-///     formatDate(DateTime(1989, 02, 1, 15, 40), [HH,'\h',nn]);
+///     formatDate(DateTime(1989, 02, 1, 15, 40), [HH,'\\h',nn]);
 ///     // => 15h40
 ///
 
