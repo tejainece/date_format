@@ -81,5 +81,9 @@ void main() {
       expect(formatDate(DateTime(2018, 1, 25), [yy, '-', M, '-', D], locale: SpanishLocale()),
           '18-Ene-Jue');
     });
+
+    test("Escaping", () {
+      expect(formatDate(DateTime(2020, 04, 18, 21, 14), [H, '\\h', n]), '21h14');
+    });
   });
 }

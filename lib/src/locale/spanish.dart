@@ -52,4 +52,10 @@ class SpanishLocale implements Locale {
     'Sábado',
     'Domingo'
   ];
+
+  @override
+  String get am => "AM";
+
+  @override
+  String get pm => "PM";
 }

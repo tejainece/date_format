@@ -223,12 +223,23 @@ const String am = 'am';
 const String z = 'z';
 const String Z = 'Z';
 
+/// Escape delimiters to be used as normal string.
+///
+/// Example:
+///     formatDate(DateTime(1989, 02, 1, 15, 40), [HH,'\\h',nn]);
+///     // => 15h40
+///
+
+const String escape = '\\';
+
 String formatDate(DateTime date, List<String> formats,
     {Locale locale = const EnglishLocale()}) {
   final sb = StringBuffer();
 
   for (String format in formats) {
-    if (format == yyyy) {
+    if (format.startsWith(escape)) {
+      sb.write(format.replaceAll(escape, ''));
+    } else if (format == yyyy) {
       sb.write(_digits(date.year, 4));
     } else if (format == yy) {
       sb.write(_digits(date.year % 100, 2));
