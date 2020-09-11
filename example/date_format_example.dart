@@ -41,6 +41,6 @@ main() {
 
   print(formatDate(
       DateTime(1989, 02, 1, 15, 40, 10), [HH, ':', nn, ':', ss, ' ', Z]));
-      
+
   print(formatDate(DateTime(2020, 04, 18, 21, 14), [H, '\\h', n]));
 }

@@ -238,7 +238,8 @@ String formatDate(DateTime date, List<String> formats,
 
   for (String format in formats) {
     if (format.startsWith(escape)) {
-      sb.write(format.replaceAll(escape, ''));
+      format = format.substring(1);
+      sb.write(format);
     } else if (format == yyyy) {
       sb.write(_digits(date.year, 4));
     } else if (format == yy) {

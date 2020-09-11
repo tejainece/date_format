@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.9
+
++ Escape format segment
+
 ## 1.0.8
 
 - Added `Locale` support with `EnglishLocale` as default locale
