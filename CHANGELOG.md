@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.2
+
++ Added Italian and Turkish `DateLocale`s
+
 ## 2.0.1
 
 + Renamed `Locale` to `DateLocale`

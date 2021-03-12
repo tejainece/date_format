@@ -1,7 +1,7 @@
 import 'package:date_format/date_format.dart';
 
-class TurkishLocale implements Locale {
-  const TurkishLocale();
+class TurkishDateLocale implements DateLocale {
+  const TurkishDateLocale();
 
   final List<String> monthsShort = const [
     'Oca',
