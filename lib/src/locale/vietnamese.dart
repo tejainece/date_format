@@ -1,7 +1,7 @@
 import 'package:date_format/date_format.dart';
 
-class VietNameseLocale implements Locale {
-  const VietNameseLocale();
+class VietnameseDateLocale implements DateLocale {
+  const VietnameseDateLocale();
 
   final List<String> monthsShort = const [
     'Th1',

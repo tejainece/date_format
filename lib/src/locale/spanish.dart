@@ -1,7 +1,7 @@
 import 'package:date_format/date_format.dart';
 
-class SpanishLocale implements Locale {
-  const SpanishLocale();
+class SpanishDateLocale implements DateLocale {
+  const SpanishDateLocale();
 
   final List<String> monthsShort = const [
     'Ene',

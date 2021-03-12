@@ -67,30 +67,30 @@ void main() {
     test('Spanish', () {
       expect(
           formatDate(DateTime(1989, 02, 1), [yy, '-', MM, '-', d],
-              locale: SpanishLocale()),
+              locale: SpanishDateLocale()),
           '89-Febrero-1');
       expect(
           formatDate(DateTime(1989, 03, 1), [yy, '-', M, '-', d],
-              locale: SpanishLocale()),
+              locale: SpanishDateLocale()),
           '89-Mar-1');
 
       expect(
           formatDate(DateTime(1989, 04, 1), [yy, '-', M, '-', d],
-              locale: SpanishLocale()),
+              locale: SpanishDateLocale()),
           '89-Abr-1');
 
       expect(
           formatDate(DateTime(1989, 02, 1), [yy, '-', M, '-', DD],
-              locale: SpanishLocale()),
+              locale: SpanishDateLocale()),
           '89-Feb-Miércoles');
       expect(
           formatDate(DateTime(1989, 02, 1), [yy, '-', M, '-', D],
-              locale: SpanishLocale()),
+              locale: SpanishDateLocale()),
           '89-Feb-Mié');
 
       expect(
           formatDate(DateTime(2018, 1, 25), [yy, '-', M, '-', D],
-              locale: SpanishLocale()),
+              locale: SpanishDateLocale()),
           '18-Ene-Jue');
     });
 

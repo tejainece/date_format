@@ -233,7 +233,7 @@ const String Z = 'Z';
 const String escape = '\\';
 
 String formatDate(DateTime date, List<String> formats,
-    {Locale locale = const EnglishLocale()}) {
+    {DateLocale locale = const EnglishDateLocale()}) {
   final sb = StringBuffer();
 
   for (String format in formats) {
