@@ -44,13 +44,13 @@ class KoreanDateLocale implements DateLocale {
   ];
 
   final List<String> daysLong = const [
-    '월',
-    '화',
-    '수',
-    '목',
-    '금',
-    '토',
-    '일'
+    '월요일',
+    '화요일',
+    '수요일',
+    '목요일',
+    '금요일',
+    '토요일',
+    '일요일'
   ];
 
   @override
