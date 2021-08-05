@@ -1,5 +1,10 @@
 # Changelog
 
+## 2.0.3
+
++ Korean locale
++ Bug fix with `S`
+
 ## 2.0.2
 
 + Added Italian and Turkish `DateLocale`s
