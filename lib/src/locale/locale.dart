@@ -5,6 +5,7 @@ export 'spanish.dart';
 export 'turkish.dart';
 export 'vietnamese.dart';
 export 'korean.dart';
+export 'german.dart';
 
 abstract class DateLocale {
   List<String> get monthsShort;
