@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.4
+
++ German locale
+
 ## 2.0.3
 
 + Korean locale

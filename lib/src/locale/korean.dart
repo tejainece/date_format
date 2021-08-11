@@ -33,15 +33,7 @@ class KoreanDateLocale implements DateLocale {
     '12월'
   ];
 
-  final List<String> daysShort = const [
-    '월',
-    '화',
-    '수',
-    '목',
-    '금',
-    '토',
-    '일'
-  ];
+  final List<String> daysShort = const ['월', '화', '수', '목', '금', '토', '일'];
 
   final List<String> daysLong = const [
     '월요일',
