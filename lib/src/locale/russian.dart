@@ -1,7 +1,7 @@
 import 'package:date_format/date_format.dart';
 
-class RussianDateFormat implements DateLocale {
-  const RussianDateFormat();
+class RussianDateLocale implements DateLocale {
+  const RussianDateLocale();
 
   final List<String> monthsShort = const [
     'Янв',
