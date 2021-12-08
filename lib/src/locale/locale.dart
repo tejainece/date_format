@@ -1,6 +1,7 @@
 export 'english.dart';
 export 'italian.dart';
 export 'portuguese.dart';
+export 'russian.dart';
 export 'spanish.dart';
 export 'turkish.dart';
 export 'vietnamese.dart';
