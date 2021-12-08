@@ -4,18 +4,18 @@ class RussianDateLocale implements DateLocale {
   const RussianDateLocale();
 
   final List<String> monthsShort = const [
-    'Янв',
-    'Февр',
+    'Янв.',
+    'Февр.',
     'Март',
-    'Апр',
+    'Апр.',
     'Май',
     'Июнь',
     'Июль',
-    'Авг',
-    'Сент',
-    'Окт',
-    'Нояб',
-    'Дек'
+    'Авг.',
+    'Сент.',
+    'Окт.',
+    'Нояб.',
+    'Дек.'
   ];
 
   final List<String> monthsLong = const [
