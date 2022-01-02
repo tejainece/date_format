@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.5
+
++ French locale
+
 ## 2.0.4
 
 + German locale

@@ -4,7 +4,7 @@ A simple API to format dates.
 
 # Usage
 
-Use `formatDate` function to format a `DateTime`
+Use `formatDate` function to format a `DateTime` object.
 
 ```dart
 print(formatDate(DateTime(1989, 02, 21), [yyyy, '-', mm, '-', dd]));
