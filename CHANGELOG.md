@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.6
+
++ Export french locale
+
 ## 2.0.5
 
 + French locale

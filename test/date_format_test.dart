@@ -1,5 +1,4 @@
 import 'package:date_format/date_format.dart';
-import 'package:date_format/src/locale/spanish.dart';
 import 'package:test/test.dart';
 
 void main() {
