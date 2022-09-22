@@ -1,5 +1,12 @@
 # Changelog
 
+## 2.0.7
+
++ Khmer locale
++ Arabic locale
++ Fixed 'uuu' microseconds
++ 
+
 ## 2.0.6
 
 + Export french locale
