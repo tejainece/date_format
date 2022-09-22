@@ -12,7 +12,7 @@ class SpanishDateLocale implements DateLocale {
     'Jun',
     'Jul',
     'Ago',
-    'Set',
+    'Sep',
     'Oct',
     'Nov',
     'Dic'
@@ -27,7 +27,7 @@ class SpanishDateLocale implements DateLocale {
     'Junio',
     'Julio',
     'Agosto',
-    'Setiembre',
+    'Septiembre',
     'Octubre',
     'Noviembre',
     'Diciembre'
