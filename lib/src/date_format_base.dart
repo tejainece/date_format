@@ -293,7 +293,7 @@ String formatDate(DateTime date, List<String> formats,
     } else if (format == S) {
       sb.write(date.millisecond);
     } else if (format == uuu) {
-      sb.write(_digits(date.microsecond, 2));
+      sb.write(_digits(date.microsecond, 3));
     } else if (format == u) {
       sb.write(date.microsecond);
     } else if (format == z) {
