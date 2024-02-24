@@ -35,23 +35,23 @@ class ArabicDateLocale implements DateLocale {
   ];
 
   final List<String> daysShort = const [
-    'الأحد',
     'الاثنين',
     'الثلاثاء',
     'الأربعاء',
     'الخميس',
     'الجمعة',
     'السبت',
+    'الأحد',
   ];
 
   final List<String> daysLong = const [
-    'الأحد',
     'الاثنين',
     'الثلاثاء',
     'الأربعاء',
     'الخميس',
     'الجمعة',
     'السبت',
+    'الأحد',
   ];
 
   @override
