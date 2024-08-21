@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.9
+
++ Changed Thursday abbreviation to `Thu` in English locale
+
 ## 2.0.8
 
 + Arabic day name fixes

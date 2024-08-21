@@ -37,7 +37,7 @@ class EnglishDateLocale implements DateLocale {
     'Mon',
     'Tue',
     'Wed',
-    'Thur',
+    'Thu',
     'Fri',
     'Sat',
     'Sun'

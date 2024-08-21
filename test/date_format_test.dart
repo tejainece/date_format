@@ -24,7 +24,7 @@ void main() {
           '89-Feb-Wed');
 
       expect(formatDate(DateTime(2018, 1, 25), [yy, '-', M, '-', D]),
-          '18-Jan-Thur');
+          '18-Jan-Thu');
     });
 
     test("AM/PM", () {
