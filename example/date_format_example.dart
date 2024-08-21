@@ -1,6 +1,7 @@
 import 'package:date_format/date_format.dart';
 
 main() {
+  print(formatDate(DateTime(1989, 2, 21), [dd, '/', mm, '/', yyyy]));
   print(formatDate(DateTime(1989, 2, 21), [yyyy, '-', mm, '-', dd]));
   print(formatDate(DateTime(1989, 2, 21), [yy, '-', m, '-', dd]));
   print(formatDate(DateTime(1989, 2, 1), [yy, '-', m, '-', d]));

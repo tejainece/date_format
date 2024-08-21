@@ -31,7 +31,6 @@ class ArabicDateLocale implements DateLocale {
     'أكتوبر',
     'نوفمبر',
     'ديسمبر',
-    s
   ];
 
   final List<String> daysShort = const [

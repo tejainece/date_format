@@ -1,5 +1,9 @@
 # Changelog
 
+## 2.0.8
+
++ Arabic day name fixes
+
 ## 2.0.7
 
 + Khmer locale
