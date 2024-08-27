@@ -9,6 +9,7 @@ export 'portuguese.dart';
 export 'russian.dart';
 export 'schinese.dart';
 export 'spanish.dart';
+export 'tchinese.dart';
 export 'turkish.dart';
 export 'vietnamese.dart';
 export 'arabic.dart';
